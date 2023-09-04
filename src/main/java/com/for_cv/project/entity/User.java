@@ -48,7 +48,9 @@ public class User {
     @Column(updatable = false)
     private LocalDateTime createDate;
 
-    private Collection<? extends GrantedAuthority>
+    // @Transient means field as authorities won't be stored in the database
+    @Transient
+    private Collection<? extends GrantedAuthority> authorities;
 
     //@PrePersist annotation get used to save our field as 'date' before save User as and Object in db
     @PrePersist
