@@ -5,7 +5,6 @@ import com.for_cv.project.entity.enums.ERole;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.time.LocalDateTime;
