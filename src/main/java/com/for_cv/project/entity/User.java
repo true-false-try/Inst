@@ -3,9 +3,9 @@ package com.for_cv.project.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.for_cv.project.entity.enums.ERole;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,7 +15,7 @@ import java.util.*;
 @Data
 @Entity
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class User implements UserDetails {
 
     @Id
@@ -54,6 +54,9 @@ public class User implements UserDetails {
     // @Transient means field as authorities won't be stored in the database
     @Transient
     private Collection<? extends GrantedAuthority> authorities;
+
+    public User(Long id, String username, String email, String password, List<GrantedAuthority> authorities) {
+    }
 
     //@PrePersist annotation get used to save our field as 'date' before save User as and Object in db
     @PrePersist
