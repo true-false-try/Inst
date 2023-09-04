@@ -33,7 +33,7 @@ public class User {
 
     @ElementCollection(targetClass = ERole.class)
     @CollectionTable(name = "user_role",
-            joinColumns = @JoinColumn(referencedColumnName = "userId")
+            joinColumns = @JoinColumn(name = "user_id")
     )
     private Set<ERole> roles = new HashSet<>();
 
