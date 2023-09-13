@@ -2,17 +2,16 @@ package com.for_cv.project.security;
 
 import com.for_cv.project.payload.response.InvalidLoginResponse;
 import com.google.gson.Gson;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
-import static com.for_cv.project.security.SecurityConstants.CONTENT_TYPE;
-
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static com.for_cv.project.security.SecurityConstants.CONTENT_TYPE;
 
 /**
  * This class has worked to catch 401 error, if our user will want to get security resources without authorization.

@@ -2,13 +2,13 @@ package com.for_cv.project.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.for_cv.project.entity.enums.ERole;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.*;
 
